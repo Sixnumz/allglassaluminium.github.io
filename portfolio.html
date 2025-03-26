@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ผลงาน - ALL GLASS ALUMINIUM</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -22,7 +23,6 @@
                     <span></span>
                 </div>
                 <ul>
-                    <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT US</a></li>
                     <li><a href="products.html">PRODUCTS</a></li>
@@ -33,23 +33,85 @@
             </nav>
         </div>
     </header>
+
     <section class="content">
         <div class="container">
             <h2>ผลงานของเรา</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 40px;">สำรวจผลงานคุณภาพสูงจากทีมงานมืออาชีพของเรา</p>
             <div class="gallery">
                 <div class="gallery-grid">
-                    <img src="images/portfolio1.jpg" alt="ผลงาน 1">
-                    <img src="images/portfolio2.jpg" alt="ผลงาน 2">
-                    <img src="images/portfolio3.jpg" alt="ผลงาน 3">
-                    <img src="images/portfolio4.jpg" alt="ผลงาน 4">
+                    <div class="portfolio-item" onclick="openModal('modal1')" data-aos="fade-up">
+                        <img src="images/portfolio1.jpg" alt="ผลงาน 1">
+                        <div class="portfolio-title">โครงการหมู่บ้าน A</div>
+                    </div>
+                    <div class="portfolio-item" onclick="openModal('modal2')" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/portfolio2.jpg" alt="ผลงาน 2">
+                        <div class="portfolio-title">อาคารพาณิชย์ B</div>
+                    </div>
+                    <div class="portfolio-item" onclick="openModal('modal3')" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/portfolio3.jpg" alt="ผลงาน 3">
+                        <div class="portfolio-title">โรงแรม C</div>
+                    </div>
+                    <div class="portfolio-item" onclick="openModal('modal4')" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/portfolio4.jpg" alt="ผลงาน 4">
+                        <div class="portfolio-title">คอนโด D</div>
+                    </div>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 30px;">เราภูมิใจในผลงานทุกชิ้นที่สร้างสรรค์ ติดต่อเราเพื่อดูเพิ่มเติม!</p>
-            <div style="text-align: center; margin-top: 20px;">
+
+            <!-- Modal -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">×</span>
+                    <h3>โครงการหมู่บ้าน A</h3>
+                    <div class="sub-gallery">
+                        <img src="images/portfolio1_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
+                        <img src="images/portfolio1_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/portfolio1_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
+                    </div>
+                </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">×</span>
+                    <h3>อาคารพาณิชย์ B</h3>
+                    <div class="sub-gallery">
+                        <img src="images/portfolio2_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
+                        <img src="images/portfolio2_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/portfolio2_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
+                    </div>
+                </div>
+            </div>
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">×</span>
+                    <h3>โรงแรม C</h3>
+                    <div class="sub-gallery">
+                        <img src="images/portfolio3_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
+                        <img src="images/portfolio3_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/portfolio3_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
+                    </div>
+                </div>
+            </div>
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">×</span>
+                    <h3>คอนโด D</h3>
+                    <div class="sub-gallery">
+                        <img src="images/portfolio4_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
+                        <img src="images/portfolio4_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/portfolio4_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #666; font-size: 18px;">เราภูมิใจในผลงานทุกชิ้นที่สร้างสรรค์ ติดต่อเราเพื่อดูเพิ่มเติม!</p>
                 <a href="contact.html" class="btn">ติดต่อเรา</a>
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <p>© 2025 ALL GLASS ALUMINIUM. สงวนลิขสิทธิ์.</p>
@@ -58,7 +120,11 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
+
     <script src="js/script.js"></script>
-    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'925cd8baeb4ebcf0',t:'MTc0Mjg4OTMzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>

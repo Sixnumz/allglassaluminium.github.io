@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Slider (สำหรับหน้า index.html หรือหน้าที่มี Slider)
     const slides = document.querySelectorAll('.slide');
     if (slides.length > 0) {
         let currentSlide = 0;
@@ -9,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        document.querySelector('.next').addEventListener('click', () => {
+        document.querySelector('.next')?.addEventListener('click', () => {
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
         });
 
-        document.querySelector('.prev').addEventListener('click', () => {
+        document.querySelector('.prev')?.addEventListener('click', () => {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             showSlide(currentSlide);
         });
@@ -25,25 +26,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 
-    const backToTopButton = document.querySelector('.back-to-top');
-    if (backToTopButton) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
+    // Modal for Portfolio (สำหรับหน้า portfolio.html)
+    window.openModal = function(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('show');
+            console.log(`Opening modal: ${modalId}`); // Debug
+        } else {
+            console.error(`Modal with ID ${modalId} not found`); // Debug
+        }
+    };
+
+    window.closeModal = function(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.remove('show');
+            console.log(`Closing modal: ${modalId}`); // Debug
+        }
+    };
+
+    window.onclick = function(event) {
+        const modals = document.getElementsByClassName('modal');
+        for (let i = 0; i < modals.length; i++) {
+            if (event.target === modals[i]) {
+                modals[i].classList.remove('show');
             }
-        });
-    }
+        }
+    };
 
-    const popup = document.getElementById('welcomePopup');
-    if (popup) {
-        popup.classList.add('show');
-    }
-
+    // Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -58,15 +71,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Back to Top
+    const backToTopButton = document.querySelector('.back-to-top');
+    if (backToTopButton) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+    }
 });
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function closePopup() {
-    const popup = document.getElementById('welcomePopup');
-    if (popup) {
-        popup.classList.remove('show');
-    }
 }

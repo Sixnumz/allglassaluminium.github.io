@@ -22,7 +22,6 @@
                     <span></span>
                 </div>
                 <ul>
-                    <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT US</a></li>
                     <li><a href="products.html">PRODUCTS</a></li>
@@ -37,7 +36,9 @@
     <section class="content">
         <div class="container">
             <img src="https://cdn.discordapp.com/attachments/1340777329336778782/1354022594881519697/1742894535334.jpg?ex=67e4700f&is=67e31e8f&hm=2b930019f192aea1327ec565f1c1190d7d4259382ba2d789db6b9f62c1554426&" alt="Main_Banner" width="100%">
-            <h2>CONTACT ALL GLASS</h2>
+            <div class="header-section">
+                <h2 class="no-underline center-text"><span class="contact-part" style="font-size: 20px;">CONTACT</span> <span class="all-glass-part" style="font-size: 20px;">ALL GLASS</span></h2>
+            </div>
             <div class="contact-info-wrapper">
                 <!-- แผนที่ -->
                 <div class="map-section">
@@ -46,13 +47,13 @@
                 <!-- ข้อมูลติดต่อ -->
                 <div class="contact-details">
                     <h3>บริษัท ออล กลาส อลูมิเนียม จำกัด</h3>
-                    <p>8/122 ซอย01กาญจนาภิเษก 6/1 แขวงท่าแร้ง เขตบางเขน กรุงเทพมหานคร 10220</p>
+                    <p class="allow-select">8/122 ซอย01กาญจนาภิเษก 6/1 แขวงท่าแร้ง เขตบางเขน กรุงเทพมหานคร 10220</p>
                     <h3 style="color: #c62828;">ALL GLASS COMPANY LIMITED</h3>
-                    <p>8/122 Soi 01 Kanchanaphisek 6/1, Tha Raeng Subdistrict, Bang Khen District, Bangkok 10220</p>
-                    <p><i class="fas fa-phone-alt"></i> 092-262-2987</p>
-                    <p><i class="fas fa-phone-alt"></i> 093-608-1400</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@allglass.co.th">info@allglass.co.th</a></p>
-                    <p><a href="https://www.facebook.com/profile.php?id=100064124831338&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></p>
+                    <p class="allow-select">8/122 Soi 01 Kanchanaphisek 6/1, Tha Raeng Subdistrict, Bang Khen District, Bangkok 10220</p>
+                    <p class="allow-select"><i class="fas fa-phone-alt" style="color: black;"></i> 092-262-2987</p>
+                    <p class="allow-select"><i class="fas fa-phone-alt" style="color: black;"></i> 093-608-1400</p>
+                    <p class="allow-select"><i class="fas fa-envelope" style="color: black;"></i> <a href="mailto:allglasschaon@gmail.com" style="color: black;">allglasschaon@gmail.com</a></p>
+                    <p><a href="https://www.facebook.com/profile.php?id=100064124831338&mibextid=ZbWKwL" target="_blank" style="color: black;"><i class="fab fa-facebook-f" style="color: black;"></i> Facebook</a></p>
                 </div>
             </div>
         </div>
@@ -66,6 +67,8 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
 
     <script src="js/script.js"></script>
 </body>
