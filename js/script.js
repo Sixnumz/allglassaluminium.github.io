@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // โค้ดสำหรับ slider
     const slides = document.querySelectorAll('.slide');
     if (slides.length > 0) {
         let currentSlide = 0;
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 
-    // โค้ดสำหรับปุ่ม Back to Top (ถ้ามีการใช้งาน)
     const backToTopButton = document.querySelector('.back-to-top');
     if (backToTopButton) {
         window.addEventListener('scroll', () => {
@@ -38,13 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // โค้ดสำหรับป๊อปอัพ (ถ้ามีการใช้งานใน index.html)
     const popup = document.getElementById('welcomePopup');
     if (popup) {
         popup.classList.add('show');
     }
 
-    // เพิ่มโค้ดสำหรับ Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -54,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
-        // เพิ่มการปิดเมนูเมื่อคลิกที่ลิงก์ในเมนู (ถ้าต้องการ)
         const navLinks = document.querySelectorAll('.nav-menu ul li a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
