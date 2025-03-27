@@ -11,19 +11,10 @@
 </head>
 <body>
     <header>
-        <!--
-            <div class="popup" id="welcomePopup">
-            <div class="popup-content" data-aos="fade-up">
-                <h3>ยินดีต้อนรับสู่ ALL GLASS ALUMINIUM CO., LTD.</h3>
-                <p>รับส่วนลด 10% สำหรับการสั่งซื้อครั้งแรก!</p>
-                <button onclick="closePopup()">ปิด</button>
-            </div>
-        </div>
-        -->
         <div class="container">
             <div class="logo-wrapper">
-                <img src="images/logo.jpg" alt="Logo" class="logo">
-                <span class="brand-name">ALL GLASS ALUMINIUM CO., LTD.</span>
+                <img src="images/logo.jpg" alt="Logo" class="logo" id="logos">
+                <span class="brand-name" id="brand-name">ALL GLASS ALUMINIUM CO., LTD.</span>
             </div>
             <nav class="nav-menu">
                 <div class="hamburger">
@@ -34,7 +25,6 @@
                 <ul>
                     <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
                     <li><a href="index.html">HOME</a></li>
-                    <!-- <li><a href="about.html">ABOUT US</a></li> -->
                     <li><a href="products.html">PRODUCTS</a></li>
                     <li><a href="services.html">SERVICES</a></li>
                     <li><a href="portfolio.html">PORTFOLIO</a></li>
@@ -43,7 +33,7 @@
             </nav>
         </div>
     </header>
-    <!-- ส่วนที่เหลือของไฟล์ยังคงเหมือนเดิม -->
+
     <section class="slider">
         <div class="slides">
             <div class="slide active" style="background-image: url('images/tmpered-glass.jpg');">
@@ -71,7 +61,26 @@
         <button class="prev">❮</button>
         <button class="next">❯</button>
     </section>
-    <!-- <section class="content">
+
+    <section class="content">
+        <div class="container">
+            <div class="contact-info-wrapper">
+                <div class="map-section">
+                    <img src="https://cdn.discordapp.com/attachments/1340777329336778782/1354022594881519697/1742894535334.jpg?ex=67e5c18f&is=67e4700f&hm=eb2581926f0918ccb073af7e5a4d631c3c4bfdaa38c370b95ddb2423ac42065b&" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></img>
+                </div>
+                <div class="contact-details">
+                    <div class="header-section">
+                        <h2 class="no-underline center-text"><span class="contact-part" style="font-size: 20px;">Home</span>
+                    </div>
+                    <p class="info-header" style="color: #c62828;">คุณภาพและจุดประสงค์</p>
+                    <p class="allow-select"></p>
+                    <p class="allow-select"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
         <div class="container">
             <h2>ทำไมต้องเลือกเรา?</h2>
             <div class="features">
@@ -89,7 +98,8 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
+
     <footer>
         <div class="container">
             <p>© 2025 ALL GLASS ALUMINIUM. สงวนลิขสิทธิ์.</p>
@@ -98,9 +108,11 @@
             </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
     <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'925cd8badc0253d5',t:'MTc0Mjg4OTMzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'926beaec4c9ddd1d',t:'MTc0MzA0NzM2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
