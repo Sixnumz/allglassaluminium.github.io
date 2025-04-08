@@ -6,125 +6,179 @@
     <title>ผลงาน - ALL GLASS ALUMINIUM</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo-wrapper">
-                <img src="images/logo.jpg" alt="Logo" class="logo" id="logos">
-                <span class="brand-name" id="brand-name">ALL GLASS ALUMINIUM</span>
+<body class="font-['Kanit'] text-gray-800 bg-gray-100">
+    <header class="bg-white shadow-md sticky top-0 z-50 py-5">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.jpg" alt="Logo" class="h-20 hover:scale-110 transition-transform">
+                <span class="text-xl font-bold text-red-600 ml-5 uppercase tracking-wider">ALL GLASS ALUMINIUM</span>
             </div>
-            <nav class="nav-menu">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    
-                    <li><a href="products.html">PRODUCTS</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+            <nav id="nav-menu" class="nav-menu md:flex space-x-8 hidden absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
+                    <li><a href="index.html" class="text-red-600 font-medium text-lg py-2 px-5 hover:bg-red-600 hover:text-white rounded-full transition">HOME</a></li>
+                    <li><a href="products.html" class="text-red-600 font-medium text-lg py-2 px-5 hover:bg-red-600 hover:text-white rounded-full transition">PRODUCTS</a></li>
+                    <li><a href="services.html" class="text-red-600 font-medium text-lg py-2 px-5 hover:bg-red-600 hover:text-white rounded-full transition">SERVICES</a></li>
+                    <li><a href="portfolio.html" class="text-red-600 font-medium text-lg py-2 px-5 hover:bg-red-600 hover:text-white rounded-full transition">PORTFOLIO</a></li>
+                    <li><a href="contact.html" class="text-red-600 font-medium text-lg py-2 px-5 hover:bg-red-600 hover:text-white rounded-full transition">CONTACT</a></li>
                 </ul>
             </nav>
+            <div id="hamburger" class="hamburger md:hidden flex flex-col space-y-1 cursor-pointer">
+                <span class="w-8 h-1 bg-red-600"></span>
+                <span class="w-8 h-1 bg-red-600"></span>
+                <span class="w-8 h-1 bg-red-600"></span>
+            </div>
         </div>
     </header>
-
-    <section class="content">
-        <div class="container">
-            <h2 style="color: black;">PORTFOLIO</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 40px;">สำรวจผลงานคุณภาพสูงจากทีมงานมืออาชีพของเรา</p>
-            <div class="gallery">
-                <div class="gallery-grid">
-                    <div class="portfolio-item" onclick="openModal('modal1')" data-aos="fade-up">
-                        <img src="images/portfolio1.jpg" alt="ผลงาน 1">
-                        <div class="portfolio-title">โครงการหมู่บ้าน A</div>
-                    </div>
-                    <div class="portfolio-item" onclick="openModal('modal2')" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/portfolio2.jpg" alt="ผลงาน 2">
-                        <div class="portfolio-title">อาคารพาณิชย์ B</div>
-                    </div>
-                    <div class="portfolio-item" onclick="openModal('modal3')" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/portfolio3.jpg" alt="ผลงาน 3">
-                        <div class="portfolio-title">โรงแรม C</div>
-                    </div>
-                    <div class="portfolio-item" onclick="openModal('modal4')" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/portfolio4.jpg" alt="ผลงาน 4">
-                        <div class="portfolio-title">คอนโด D</div>
-                    </div>
+    <section class="py-20 bg-white rounded-lg shadow-sm mt-8 mx-auto max-w-6xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl text-black font-bold text-center mb-12">PORTFOLIO</h2>
+            <p class="text-gray-600 text-center mb-12">สำรวจผลงานคุณภาพสูงจากทีมงานมืออาชีพของเรา</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="relative rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openModal('modal1')" data-aos="fade-up">
+                    <img src="images/portfolio1.jpg" alt="ผลงาน 1" class="w-full h-48 object-cover hover:scale-110 transition">
+                    <div class="absolute bottom-0 w-full bg-red-600 bg-opacity-90 text-white text-center py-2">โครงการหมู่บ้าน A</div>
+                </div>
+                <div class="relative rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openModal('modal2')" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/portfolio2.jpg" alt="ผลงาน 2" class="w-full h-48 object-cover hover:scale-110 transition">
+                    <div class="absolute bottom-0 w-full bg-red-600 bg-opacity-90 text-white text-center py-2">อาคารพาณิชย์ B</div>
+                </div>
+                <div class="relative rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openModal('modal3')" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/portfolio3.jpg" alt="ผลงาน 3" class="w-full h-48 object-cover hover:scale-110 transition">
+                    <div class="absolute bottom-0 w-full bg-red-600 bg-opacity-90 text-white text-center py-2">โรงแรม C</div>
+                </div>
+                <div class="relative rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openModal('modal4')" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/portfolio4.jpg" alt="ผลงาน 4" class="w-full h-48 object-cover hover:scale-110 transition">
+                    <div class="absolute bottom-0 w-full bg-red-600 bg-opacity-90 text-white text-center py-2">คอนโด D</div>
                 </div>
             </div>
-
-            <!-- Modal -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal1')">×</span>
-                    <h3>โครงการหมู่บ้าน A</h3>
-                    <div class="sub-gallery">
-                        <img src="images/portfolio1_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
-                        <img src="images/portfolio1_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="images/portfolio1_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
-                    </div>
-                </div>
-            </div>
-            <div id="modal2" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal2')">×</span>
-                    <h3>อาคารพาณิชย์ B</h3>
-                    <div class="sub-gallery">
-                        <img src="images/portfolio2_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
-                        <img src="images/portfolio2_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="images/portfolio2_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
-                    </div>
-                </div>
-            </div>
-            <div id="modal3" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal3')">×</span>
-                    <h3>โรงแรม C</h3>
-                    <div class="sub-gallery">
-                        <img src="images/portfolio3_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
-                        <img src="images/portfolio3_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="images/portfolio3_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
-                    </div>
-                </div>
-            </div>
-            <div id="modal4" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal4')">×</span>
-                    <h3>คอนโด D</h3>
-                    <div class="sub-gallery">
-                        <img src="images/portfolio4_sub1.jpg" alt="รูปย่อย 1" data-aos="zoom-in">
-                        <img src="images/portfolio4_sub2.jpg" alt="รูปย่อย 2" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="images/portfolio4_sub3.jpg" alt="รูปย่อย 3" data-aos="zoom-in" data-aos-delay="200">
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="color: #666; font-size: 18px;">เราภูมิใจในผลงานทุกชิ้นที่สร้างสรรค์ ติดต่อเราเพื่อดูเพิ่มเติม!</p>
-                <a href="contact.html" class="btn">ติดต่อเรา</a>
+            <div class="text-center mt-12">
+                <p class="text-gray-600 text-lg mb-6">เราภูมิใจในผลงานทุกชิ้นที่สร้างสรรค์ ติดต่อเราเพื่อดูเพิ่มเติม!</p>
+                <a href="contact.html" class="inline-block bg-red-600 text-white py-3 px-8 rounded-full hover:bg-red-800 transition">ติดต่อเรา</a>
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
+    <div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition-all duration-300">
+        <div class="bg-white p-6 rounded-lg max-w-3xl w-11/12 shadow-lg relative">
+            <span class="absolute top-4 right-6 text-3xl text-red-600 cursor-pointer hover:text-red-800 transition" onclick="closeModal('modal1')">×</span>
+            <h3 class="text-xl text-red-600 font-medium mb-6">โครงการหมู่บ้าน A</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <img src="images/portfolio1_sub1.jpg" alt="รูปย่อย 1" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in">
+                <img src="images/portfolio1_sub2.jpg" alt="รูปย่อย 2" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/portfolio1_sub3.jpg" alt="รูปย่อย 3" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition-all duration-300">
+        <div class="bg-white p-6 rounded-lg max-w-3xl w-11/12 shadow-lg relative">
+            <span class="absolute top-4 right-6 text-3xl text-red-600 cursor-pointer hover:text-red-800 transition" onclick="closeModal('modal2')">×</span>
+            <h3 class="text-xl text-red-600 font-medium mb-6">อาคารพาณิชย์ B</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <img src="images/portfolio2_sub1.jpg" alt="รูปย่อย 1" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in">
+                <img src="images/portfolio2_sub2.jpg" alt="รูปย่อย 2" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/portfolio2_sub3.jpg" alt="รูปย่อย 3" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition-all duration-300">
+        <div class="bg-white p-6 rounded-lg max-w-3xl w-11/12 shadow-lg relative">
+            <span class="absolute top-4 right-6 text-3xl text-red-600 cursor-pointer hover:text-red-800 transition" onclick="closeModal('modal3')">×</span>
+            <h3 class="text-xl text-red-600 font-medium mb-6">โรงแรม C</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <img src="images/portfolio3_sub1.jpg" alt="รูปย่อย 1" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in">
+                <img src="images/portfolio3_sub2.jpg" alt="รูปย่อย 2" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/portfolio3_sub3.jpg" alt="รูปย่อย 3" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible transition-all duration-300">
+        <div class="bg-white p-6 rounded-lg max-w-3xl w-11/12 shadow-lg relative">
+            <span class="absolute top-4 right-6 text-3xl text-red-600 cursor-pointer hover:text-red-800 transition" onclick="closeModal('modal4')">×</span>
+            <h3 class="text-xl text-red-600 font-medium mb-6">คอนโด D</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <img src="images/portfolio4_sub1.jpg" alt="รูปย่อย 1" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in">
+                <img src="images/portfolio4_sub2.jpg" alt="รูปย่อย 2" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/portfolio4_sub3.jpg" alt="รูปย่อย 3" class="w-full h-32 object-cover rounded shadow-md hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+            </div>
+        </div>
+    </div>
+    <footer class="bg-red-600 text-white text-center py-10 shadow-inner">
+        <div class="container mx-auto px-4">
             <p>© 2025 ALL GLASS ALUMINIUM. สงวนลิขสิทธิ์.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=100064124831338&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/profile.php?id=100064124831338&mibextid=ZbWKwL" target="_blank" class="text-white text-xl hover:text-red-800 transition"><i class="fab fa-facebook-f"></i></a>
             </div>
         </div>
     </footer>
-
-    <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
-
-    <script src="js/script.js"></script>
+    <button class="back-to-top fixed bottom-8 right-8 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl opacity-0 invisible hover:bg-red-800 transition-all duration-300" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init({ duration: 800, once: true });</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('#hamburger');
+            const navMenu = document.querySelector('#nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('hidden');
+                    navMenu.classList.toggle('active');
+                });
+
+                const navLinks = document.querySelectorAll('#nav-menu ul li a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.add('hidden');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+
+            window.openModal = function(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.add('show');
+                    modal.classList.remove('opacity-0', 'invisible');
+                }
+            };
+
+            window.closeModal = function(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.remove('show');
+                    modal.classList.add('opacity-0', 'invisible');
+                }
+            };
+
+            window.onclick = function(event) {
+                const modals = document.getElementsByClassName('modal');
+                for (let i = 0; i < modals.length; i++) {
+                    if (event.target === modals[i]) {
+                        modals[i].classList.remove('show');
+                        modals[i].classList.add('opacity-0', 'invisible');
+                    }
+                }
+            };
+
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTopButton.classList.add('show');
+                        backToTopButton.classList.remove('opacity-0', 'invisible');
+                    } else {
+                        backToTopButton.classList.remove('show');
+                        backToTopButton.classList.add('opacity-0', 'invisible');
+                    }
+                });
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
