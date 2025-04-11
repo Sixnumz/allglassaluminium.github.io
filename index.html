@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script> <!-- ใช้ CDN ชั่วคราว ถ้าพร้อมติดตั้งถาวรให้เปลี่ยนตามขั้นตอนด้านบน -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="./output.css" rel="stylesheet">
 </head>
 <body class="font-['Kanit'] text-gray-800 bg-gray-100">
     <header class="bg-white shadow-md sticky top-0 z-50 py-4 sm:py-5">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div class="container px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             <div class="flex items-center">
                 <img src="images/logo.jpg" alt="Logo" class="h-16 sm:h-20 md:h-24 hover:scale-110 transition-transform">
                 <span class="hidden md:block text-lg sm:text-xl md:text-2xl font-bold text-red-600 ml-3 sm:ml-5 md:ml-6 uppercase tracking-wider">ALL GLASS ALUMINIUM</span>
@@ -38,7 +39,6 @@
           <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 z-0 transition-opacity duration-500" style="background-image: url('images/laminated-glass.jpg');"></div>
           <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 z-0 transition-opacity duration-500" style="background-image: url('images/tempered-laninated-glass.webp');"></div>
         </div>
-      
         <!-- ปุ่มเลื่อน -->
         <button class="prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-red-600 bg-opacity-70 text-white px-4 py-2 text-xl hover:bg-red-800 transition z-20">❮</button>
         <button class="next absolute top-1/2 right-4 transform -translate-y-1/2 bg-red-600 bg-opacity-70 text-white px-4 py-2 text-xl hover:bg-red-800 transition z-20">❯</button>
@@ -127,6 +127,25 @@
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
           }, 4000); // ความเร็ว
+
+          const hamburger = document.querySelector('#hamburger');
+            const navMenu = document.querySelector('#nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('hidden');
+                    navMenu.classList.toggle('active');
+                });
+
+                const navLinks = document.querySelectorAll('#nav-menu ul li a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.add('hidden');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
         });
         </script>
         
